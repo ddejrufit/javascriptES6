@@ -1,0 +1,31 @@
+<div></div>
+
+
+<script>
+
+
+
+console.log(this);
+
+
+function 함수(){
+    console.log(this)
+}
+함수();
+window.함수();
+
+
+
+// this = 나를 담고 있는 오브젝트
+var 오브젝트 ={
+    data : {
+        함수(){
+            console.log(this)
+        }
+    }
+}
+
+
+
+
+</script>
