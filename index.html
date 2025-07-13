@@ -1,21 +1,26 @@
 <div></div>
-<button id="버튼">버튼</button>
+<!-- <button id="버튼">버튼</button> -->
+<button id="버튼">버튼이에요</button>
+
 
 <script>
+  document.getElementById('버튼').addEventListener('click', function(){
+    
+    setTimeout(()=>{ console.log(this.innerHTML) }, 1000)
+  });
 
 
+// var 오브젝트 = {
+//     이름들 : ['김','이','박'],
+//     함수 : function(){
+//         console.log(this)
+//         오브젝트.이름들.forEach(function(){
+//             console.log(this)
+//         })
+//     }
+// }
 
-var 오브젝트 = {
-    이름들 : ['김','이','박'],
-    함수 : function(){
-        console.log(this)
-        오브젝트.이름들.forEach(function(){
-            console.log(this)
-        })
-    }
-}
-
-오브젝트.함수();
+// 오브젝트.함수();
 
 // console.log(this);
 
@@ -62,22 +67,22 @@ function 더해주세요(x){
 //  arrow function 
 var 두배만들기 = (x) => { return x * 2 }
 
-console.log( 두배만들기(4) );
-console.log( 두배만들기(8) );
+// console.log( 두배만들기(4) );
+// console.log( 두배만들기(8) );
 
 //  소괄호 생략 가능
 // (파라미터 한개 일때)
 var 두배만들기 = x => { return x * 2 }
 
-console.log( 두배만들기(4) );
-console.log( 두배만들기(8) );
+// console.log( 두배만들기(4) );
+// console.log( 두배만들기(8) );
 
 var 두배만들기 = x => x * 2 ;
 
 // 중괄호 안에 return 한줄 뿐일때
 // 중괄호와 return도 생략가능
-console.log( 두배만들기(4) );
-console.log( 두배만들기(8) );
+// console.log( 두배만들기(4) );
+// console.log( 두배만들기(8) );
 
 
 var 사람 = {
@@ -89,12 +94,19 @@ var 사람 = {
 
 
 
-사람.sayHi();
+// 사람.sayHi();
 
 var 자료 = { 
   data : [1,2,3,4,5] 
+  }
+
+자료.전부더하기 = function(){
+  var 합 = 0;
+  this.data.forEach(function(a){
+    합 = 합 + a;
+  })
+  console.log(합);
 }
 자료.전부더하기();
-
 
 </script>
